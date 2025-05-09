@@ -1,6 +1,11 @@
 ﻿
+using AppliSebo.Endpoints;
+
 var builder = WebApplication.CreateBuilder();
+
+builder.Services.AddSeboBackService();
+
 var app = builder.Build();
 
-app.MapGet("/hello", () => "Hello Sebo");
+app.MapGroup("categorie/").MapBackSeboEndpoint();
 app.Run();
