@@ -7,4 +7,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\domains\SeboDomain\SeboDomain.csproj" />
+    <ProjectReference Include="..\..\services\ServiceSebo\ServiceSebo.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ServiceSebo.domains
+namespace SeboDomain.Models
 {
     public class Category
     {
-        public Int32 Id { get; set; }
-        public String NomCategorie { get; set; } = String.Empty;
+        public int Id { get; set; }
+        public string NomCategorie { get; set; } = String.Empty;
     }
 }

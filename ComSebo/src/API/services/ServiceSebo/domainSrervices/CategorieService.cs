@@ -1,18 +1,29 @@
-﻿using ServiceSebo.contratServices;
-using ServiceSebo.domains;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SeboDomain.Models;
+using SeboInfrastructure.Contracts;
+using ServiceSebo.contratServices;
+
 
 namespace ServiceSebo.domainSrervices
 {
-    public class CategorieService : ICategorieService 
+    public class CategorieService
     {
-        public Category AddCategorie(Category category)
+        private List<Category> _categories = new List<Category>();
+        public Category? AddASyncCategorie(Category category)
         {
-            throw new NotImplementedException();
+            if (IsExistedCateg(category.NomCategorie)) return null;
+              _categories.Add(category);
+               return category;
+
+        }
+        public bool IsExistedCateg(string nomCateg)
+        {
+
+            return _categories.Any(c => c.NomCategorie != nomCateg);
+        }
+
+        public List<Category> GetAllCategoriesAsync()
+        {
+            return _categories.ToList();
         }
     }
 }

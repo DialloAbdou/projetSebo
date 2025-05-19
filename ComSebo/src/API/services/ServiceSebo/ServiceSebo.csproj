@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\domains\SeboDomain\SeboDomain.csproj" />
+    <ProjectReference Include="..\..\infrastructures\SeboInfrastructure\SeboInfrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

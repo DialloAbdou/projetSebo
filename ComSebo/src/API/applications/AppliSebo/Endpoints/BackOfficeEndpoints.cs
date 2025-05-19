@@ -34,7 +34,9 @@ namespace AppliSebo.Endpoints
                 e.ErrorMessage,
                 e.PropertyName,
             }));
+
             // appel  service
+
             return Results.Ok();
         }
 
