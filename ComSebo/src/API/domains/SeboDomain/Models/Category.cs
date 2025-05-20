@@ -10,5 +10,6 @@ namespace SeboDomain.Models
     {
         public int Id { get; set; }
         public string NomCategorie { get; set; } = String.Empty;
+        public List<Genre?> Genres { get; set; } = new List<Genre>();
     }
 }

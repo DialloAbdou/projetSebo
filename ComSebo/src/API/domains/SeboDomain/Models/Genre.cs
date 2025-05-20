@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace SeboDomain.Models
 {
-    public class Genres
+    public class Genre
     {
         public int Id { get; set; }
         public string Type { get; set; } = string.Empty;
+        public Category Category { get; set; }
+        public int CategoryId { get; set; }
 
     }
 }
