@@ -26,7 +26,7 @@ namespace SeboTestUnitaire.services
         {
            // Arrange
             _service = new CategorieService();
-            Category? _category = _service.AddASyncCategorie(category);
+            var isexisted = _service.IsExistedCateg(category.NomCategorie);            Category? _category = _service.AddASyncCategorie(category);
             //Action
             var result = _service.GetAllCategoriesAsync();
             // Assert
