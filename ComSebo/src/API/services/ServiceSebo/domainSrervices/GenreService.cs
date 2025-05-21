@@ -24,7 +24,6 @@ namespace ServiceSebo.domainSrervices
              _genreLists.Add(genre);
             return genre;
         }
-
         public bool IsCategExisted(int categId)
         {
             return _categories.Any(c=>c.Id == categId);    
