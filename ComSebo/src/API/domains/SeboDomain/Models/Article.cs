@@ -19,10 +19,10 @@ namespace SeboDomain.Models
         public bool Etat_Reapro { get; set; }
         public int Seuil_mini { get; set; }
         public int Qte_stock { get; set; }
-        public double Pourcentag_promo { get; set; }
+        public double? Pourcentag_promo { get; set; }
         public string? Photo { get; set; }
         public string? Description { get; set; }
-
-
+        public Genre Genre { get; set; }
+        public int GenreId { get; set; }
     }
 }
